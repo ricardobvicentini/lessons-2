@@ -12,7 +12,9 @@
 
 img {
     display: block;
-} /* Imagens são elementos inline, e não ocupam toda a lagura da página, como os blocks.
+}
+
+/* Imagens são elementos inline, e não ocupam toda a lagura da página, como os blocks.
 Neste caso todas as imagens agora estão definidas como block */
 
 /* End Reset */
@@ -20,12 +22,14 @@ Neste caso todas as imagens agora estão definidas como block */
 /* Utility Classes */
 
 .nowrap {
-    white-space: nowrap; /* Para que texto não quebre. No caso 'Hello I'm Jane */
+    white-space: nowrap;
+    /* Para que texto não quebre. No caso 'Hello I'm Jane */
 }
 
 .offscreen {
     position: absolute;
-    left: -10000px; /* Para que o figcaption não fique visível sem desaparecer do documento. */
+    left: -10000px;
+    /* Para que o figcaption não fique visível sem desaparecer do documento. */
 }
 
 /* End Utility Classes */
@@ -33,33 +37,47 @@ Neste caso todas as imagens agora estão definidas como block */
 body {
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
+    background-color: aliceblue;
+    background-image: url(../img/bubbles.png), linear-gradient(-35deg, steelblue, white); /* É possível colocar img(png) e linear-gradient juntos. Os valores das propriedades abaixo seguem a ordem (url) > (linear-gradient) */
+    background-repeat: repeat-y, no-repeat;
+    background-position: right;
+    background-size: 15%, auto;
+}
+
+.container {
+    background-color: rgb(251, 210, 156); /* Fallback */
+    background-image: url(../img/map-2176x1451.png);
+    background-size: cover;
+    background-position: top right; /* Posição x e y */
+    background-repeat: no-repeat;
 }
 
 .hero {
+    border: 1px solid red;
     border-bottom: 2px solid #000;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-
-    background-color: rgb(251, 210, 156); /* Fallback */
-    background-image: url(../img/pat2-transparency.png);
+    background-color: hsla(0, 0%, 100%, 0.377); /* Background como filtro da seção hero. */
 }
 
 .h1 {
     font-size: 500%;
-    color: white;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px black;
 }
+
 .profile-pic-figure {
     width: 35%;
 }
 
-.profile-pic-figure > img {
+.profile-pic-figure>img {
     width: 100%;
     height: auto;
     min-width: 100px;
-    border: 5px double grey;
+    border: 5px double hsl(0, 0%, 0%);
     border-radius: 50%;
 }
 
@@ -71,5 +89,6 @@ body {
 
 .example img {
     width: 25%;
-    height: auto; /* A largura e a altura estão definidas no html, mas é necessário atribui-las aqui para tornar a imagem responsiva. */
+    height: auto;
+    /* A largura e a altura estão definidas no html, mas é necessário atribui-las aqui para tornar a imagem responsiva. */
 }
