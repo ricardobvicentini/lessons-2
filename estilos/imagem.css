@@ -44,7 +44,7 @@ body {
     gap: 30px;
 
     background-color: rgb(251, 210, 156); /* Fallback */
-    background-image: url('img/pat2-transparency.png');
+    background-image: url(../img/pat2-transparency.png);
 }
 
 .h1 {
