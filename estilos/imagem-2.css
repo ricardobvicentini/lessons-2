@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Begin Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* Imagens são elementos inline, e não ocupam toda a lagura da página, como os blocks.
+Neste caso todas as imagens agora estão definidas como block */
+
+/* End Reset */
+
+/* Utility Classes */
+
+.nowrap {
+    white-space: nowrap;
+    /* Para que texto não quebre. No caso 'Hello I'm Jane */
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+    /* Para que o figcaption não fique visível sem desaparecer do documento. */
+}
+
+/* End Utility Classes */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+.clip {
+    font-weight: 900;
+    font-size: 20rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url(../img/scenic-2200x1331.png);
+    background-size: 100%;
+    -webkit-background-clip: text; /* Prefixo -webkit- necessário para alguns navegadores (no caso, Chrome) a fim de utilizar o background-clip */
+    background-clip: text; /* Colocar também sem -webkit- para navegadores que não requerem. */
+    color: hsla(0, 0%, 10%, 0.192); /* Ou usar transparent */
+}
+
+.home {
+    padding: 20px;
+}
+
+.home > a {
+    text-decoration: none;
+    color: black;
+    font-size: 5rem;
+    transition: all .2s;
+}
+
+.home > a:hover {
+    -webkit-background-clip: text;
+    color: hsla(0, 0%, 10%, 0.192);
+}

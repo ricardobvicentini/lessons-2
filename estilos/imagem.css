@@ -92,3 +92,19 @@ body {
     height: auto;
     /* A largura e a altura estão definidas no html, mas é necessário atribui-las aqui para tornar a imagem responsiva. */
 }
+
+.home {
+    padding: 50px;
+}
+
+.home > a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all .2s;
+}
+
+.home > a:hover {
+    transform: scale(1.2); /* scale não funciona em elementos inline > Mudar para inline-block. */
+    color: blue;
+}
