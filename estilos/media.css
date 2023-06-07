@@ -11,14 +11,34 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES */
+
+:root {
+    /* fonts */
+    --FF: 'Nunito', sans-serif;
+    --FS: 1.5rem;
+    --FS-XL: 3rem;
+    /* colors */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR: #1e293b;
+    --RADIAL-COLOR: whitesmoke;
+    --LIGHT-COLOR: whitesmoke;
+    --DARK-COLOR: #000;
+    --SMALL-COLOR: pink;
+    --MEDIUM-COLOR: gold;
+    --LARGE-COLOR: firebrick;
+    --XL-COLOR: rebeccapurple;
+    --LAND-COLOR: dodgerblue;
+}
+
 /* GENERAL */
 
 body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--FF);
+    font-size: var(--FS);
     min-height: 100vh;
-    background-color: #475569;
-    background-image: radial-gradient(whitesmoke, #475569);
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
     display: flex;
     flex-direction: column;
 }
@@ -32,8 +52,8 @@ header, nav, main, footer {
 
 header, footer {
     position: sticky;
-    background-color: #1e293b;
-    color: whitesmoke;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--LIGHT-COLOR);
 }
 
 header {
@@ -41,10 +61,10 @@ header {
 }
 
 nav {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--LIGHT-COLOR);
+    color: var(--DARK-COLOR);
     padding: 0.5rem;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--DARK-COLOR);
 }
 
 .nav-bar {
@@ -62,7 +82,7 @@ footer {
 footer a {
     display: inline-block;
     text-decoration: none;
-    color: aliceblue;
+    color: var(--LIGHT-COLOR);
     transition: .2s;
 }
 
@@ -84,8 +104,8 @@ Obs.:
 
 @media screen and (min-width: 576px) {
     body {
-        background-color: pink;
-        background-image: radial-gradient(whitesmoke, pink);
+        background-color: var(--SMALL-COLOR);
+        background-image: radial-gradient(var(--RADIAL-COLOR), var(--SMALL-COLOR));
     }
 
     .nav-bar {
@@ -101,8 +121,8 @@ Obs.:
 
 @media screen and (min-width: 768px) {
     body {
-        background-color: gold;
-        background-image: radial-gradient(whitesmoke, gold);
+        background-color: var(--MEDIUM-COLOR);
+        background-image: radial-gradient(var(--RADIAL-COLOR), var(--MEDIUM-COLOR));
     }
     
     
@@ -112,8 +132,8 @@ Obs.:
 
 @media screen and (min-width: 992px) {
     body {
-        background-color: firebrick;
-        background-image: radial-gradient(whitesmoke, firebrick);
+        background-color: var(--LARGE-COLOR);
+        background-image: radial-gradient(var(--RADIAL-COLOR), var(--LARGE-COLOR));
     }
 
     
@@ -123,8 +143,8 @@ Obs.:
 
 @media screen and (min-width: 1200px) {
     body {
-        background-color: rebeccapurple;
-        background-image: radial-gradient(whitesmoke, rebeccapurple);
+        background-color: var(--XL-COLOR);
+        background-image: radial-gradient(var(--RADIAL-COLOR), var(--XL-COLOR));
     }
 
     
@@ -134,8 +154,8 @@ Obs.:
 
 @media screen and (max-width: 425px) and (min-aspect-ratio: 7/4) {
     body {
-        background-color: dodgerblue;
-        background-image: radial-gradient(whitesmoke, dodgerblue);
+        background-color: var(--LAND-COLOR);
+        background-image: radial-gradient(var(--RADIAL-COLOR), var(--LAND-COLOR));
     }
 
     h1, h2 {
